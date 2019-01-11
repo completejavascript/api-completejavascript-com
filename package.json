@@ -1,0 +1,39 @@
+{
+  "name": "api.completejavascript.com",
+  "version": "0.0.1",
+  "description": "A collection of some public RESTful APIs for api.completejavascript.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test-v1": "mocha ./test/v1/*.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "body-parser": "^1.18.3",
+    "rss-parser": "^3.6.2",
+    "valid-url": "^1.0.9",
+    "swagger-jsdoc": "^3.2.6",
+    "config": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/completejavascript/api-completejavascript-com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "public-api",
+    "json-feed",
+    "rss-json",
+    "express"
+  ]
+}
