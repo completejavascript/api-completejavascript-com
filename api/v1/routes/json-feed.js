@@ -17,7 +17,7 @@ const parser = new Parser();
 *       - JSON feed
 *     externalDocs:
 *       description: View Demo
-*       url: http://api-completejavascript.now.sh/api/v1/demo/json-feed
+*       url: https://api-completejavascript.now.sh/api/v1/demo/json-feed
 *     parameters:
 *       - in: query
 *         name: url
