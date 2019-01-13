@@ -10,13 +10,14 @@
     "test-v1": "mocha ./test/v1/*.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.0.1",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
-    "body-parser": "^1.18.3",
     "rss-parser": "^3.6.2",
-    "valid-url": "^1.0.9",
+    "serve-favicon": "^2.5.0",
     "swagger-jsdoc": "^3.2.6",
-    "config": "^3.0.1"
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "chai": "^4.2.0",

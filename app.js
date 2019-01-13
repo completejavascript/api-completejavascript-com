@@ -11,6 +11,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('resources'));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 // Set common headers
 app.use((req, res, next) => {
