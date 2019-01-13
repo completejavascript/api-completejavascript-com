@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const config = require('config');
 const favicon = require('serve-favicon');
+const path = require('path')
 
 const jsonFeedRoutesV1 = require('./api/v1/routes/json-feed.js');
 const swaggerDocRoutesV1 = require('./api/v1/routes/swagger-jsdoc.js');
