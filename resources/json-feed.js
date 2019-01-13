@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const jsonHTML = document.querySelector("#json-html");
   const inputURL = document.querySelector("#inp-url");
   const btnFetch = document.querySelector("#btn-fetch");
+  const fullRep = document.querySelector("#full-req");
   
   const baseAPI = 'https://completejavascript.now.sh/api/v1/jsonfeed?url='; 
   const defaultURL = 'https://davidwalsh.name/feed';
@@ -40,11 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.log(error));
   }
+
+  const setFullRequest = (feedUrl) => {
+    fullRep.textContent = `${baseAPI}${feedUrl}`;
+  }
   
   // Render with default RSS Feed URL
   setInputURL(defaultURL);
   disableInput();
   render(defaultURL);
+  setFullRequest(defaultURL);
   
   btnFetch.addEventListener("click", (e) => {
     e.preventDefault();
@@ -53,5 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     appendJsonHtml(null);
     disableInput();
     render(inputURL.value);
+    setFullRequest(inputURL.value);
   });
 });
