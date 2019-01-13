@@ -34,11 +34,11 @@ if (config.get('API_VERSION') === '1') {
     res.sendFile(__dirname + '/public/v1/docs/redoc.html');
   });
   
-  app.get('/api/v1/docs', (req, res) => {
+  app.get('/docs/v1/', (req, res) => {
     res.sendFile(__dirname + '/public/v1/docs/redoc.html');
   });
   
-  app.get('/api/v1/demo/json-feed', (req, res) => {
+  app.get('/demo/v1/json-feed', (req, res) => {
     res.sendFile(__dirname + '/public/v1/demo/json-feed.html');
   });
 }
