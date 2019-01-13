@@ -1,7 +1,7 @@
 {
-  "name": "api.completejavascript.com",
+  "name": "api-completejavascript-com",
   "version": "0.0.1",
-  "description": "A collection of some public RESTful APIs for api.completejavascript.com",
+  "description": "A collection of some public RESTful APIs from Complete Javascript",
   "main": "server.js",
   "scripts": {
     "deploy": "now -e NODE_ENV=production && now alias",
