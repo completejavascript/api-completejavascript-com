@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputURL = document.querySelector("#inp-url");
   const btnFetch = document.querySelector("#btn-fetch");
   
-  const baseAPI = 'http://localhost:3000/api/v1/jsonfeed?url='; 
+  const baseAPI = 'http://api-completejavascript.now.sh/api/v1/jsonfeed?url='; 
   const defaultURL = 'https://davidwalsh.name/feed';
   
   const setResultTextarea = (result) => {

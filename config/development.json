@@ -1,5 +1,5 @@
 {
-  "HOST": "http://api.completejavascript.com",
-  "SWAGGER_HOST": "api.completejavascript.com",
+  "HOST": "http://api-completejavascript.now.sh",
+  "SWAGGER_HOST": "api-completejavascript.now.sh",
   "API_VERSION": "1"
 }
