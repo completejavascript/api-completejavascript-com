@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const textArea = document.querySelector("#txt-area");
-  const jsonHTML = document.querySelector("#json-html");
-  const inputURL = document.querySelector("#inp-url");
-  const btnFetch = document.querySelector("#btn-fetch");
-  const fullRep = document.querySelector("#full-req");
+  const $ = document.querySelector.bind(document);
+
+  const root = $("#root");
+  const textArea = $("#txt-area");
+  const jsonHTML = $("#json-html");
+  const inputURL = $("#inp-url");
+  const btnFetch = $("#btn-fetch");
+  const fullRep = $("#full-req");
   
-  const baseAPI = 'https://completejavascript.now.sh/api/v1/jsonfeed?url='; 
+  const baseAPI = `${root.getAttribute("host")}/api/v1/jsonfeed?url=`; 
   const defaultURL = 'https://davidwalsh.name/feed';
   
   const setResultTextarea = (result) => {
@@ -46,19 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
     fullRep.textContent = `${baseAPI}${feedUrl}`;
   }
   
+  const apply = (feedUrl) => {
+    setInputURL(feedUrl);
+    disableInput();
+    render(feedUrl);
+    setFullRequest(feedUrl);
+  }
+
   // Render with default RSS Feed URL
-  setInputURL(defaultURL);
-  disableInput();
-  render(defaultURL);
-  setFullRequest(defaultURL);
+  apply(defaultURL);
   
   btnFetch.addEventListener("click", (e) => {
     e.preventDefault();
     
     setResultTextarea(null);
     appendJsonHtml(null);
-    disableInput();
-    render(inputURL.value);
-    setFullRequest(inputURL.value);
+
+    apply(inputURL.value);
   });
 });

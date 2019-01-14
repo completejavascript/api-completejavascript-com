@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title Complete Javascript's Public APIs Documentation
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="description" content="Documentation for public RESTful APIs from Complete Javascript's public APIs")
+    meta(name="keywords" content="public api, json feed, rss feed to json, rss feed")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    style(type="text/css").
+      body {
+        margin: 0;
+        padding: 0;
+      }
+  body
+    redoc(spec-url=`${HOST}/api/v1/docs/swagger.json`, expand-responses="all")
+    script(src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js")
