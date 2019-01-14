@@ -8,8 +8,8 @@ const swaggerDefinition = {
     title: "Complete JavaScript's Public APIs Documentation",
     version: "1.0.0",
     description: "<p>This is an API documentation of public RESTful APIs for developers.</p>" + 
-                 "<p>API Support: <a href=\"mailto:completejavascript.super@gmail.com\">completejavascript.super@gmail.com</a> | " + 
-                 "Made with ❤️ by: <a href=\"https://completejavascript.com\">Complete Javascript</a>.</p>",
+                 "<p>Fork me on Github: <a href=\"https://github.com/completejavascript/api-completejavascript-com\">api-completejavascript-com</a> | " +
+                 "Made with ❤️ by: <a href=\"https://completejavascript.com\">Complete Javascript</a></p>",
   },
   host: config.get('SWAGGER_HOST'),
 };
