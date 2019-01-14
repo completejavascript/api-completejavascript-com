@@ -7,11 +7,8 @@ html(lang="en")
     meta(name="description" content="Documentation for public RESTful APIs from Complete Javascript's public APIs")
     meta(name="keywords" content="public api, json feed, rss feed to json, rss feed")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    style(type="text/css").
-      body {
-        margin: 0;
-        padding: 0;
-      }
+    link(rel="stylesheet" href="/styles/redoc.css")
+      
   body
     redoc(spec-url=`${HOST}/api/v1/docs/swagger.json`, expand-responses="all")
     script(src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js")

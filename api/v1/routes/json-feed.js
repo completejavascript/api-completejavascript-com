@@ -22,7 +22,7 @@ const parser = new Parser();
 *       - in: query
 *         name: url
 *         type: string
-*         description: RSS feed url
+*         description: RSS Feed URL to be converted
 *         required: true
 *     responses:
 *       '200':
@@ -34,10 +34,10 @@ const parser = new Parser();
 *               properties:
 *                 message: 
 *                   type: string
-*                   description: Message dedails
+*                   description: Message from server
 *                 url: 
 *                   type: string
-*                   description: RSS feed url
+*                   description: Passed RSS Feed URL
 *                 apiVersion:
 *                   type: string
 *                   description: API version
@@ -53,7 +53,7 @@ const parser = new Parser();
 *               properties:
 *                 error:
 *                   type: object
-*                   description: Error detail
+*                   description: Error informations
 *                   properties:
 *                     message:
 *                       description: Error message detail
@@ -66,7 +66,7 @@ const parser = new Parser();
 *                       description: Request method
 *                       type: string
 *                     url:
-*                       description: Request url
+*                       description: Request URL
 *                       type: string
 *                 apiVersion:
 *                   type: string
@@ -80,7 +80,7 @@ const parser = new Parser();
 *               properties:
 *                 error:
 *                   type: object
-*                   description: Error detail
+*                   description: Error informations
 *                   properties:
 *                     message:
 *                       description: Error message detail
@@ -93,7 +93,7 @@ const parser = new Parser();
 *                       description: Request method
 *                       type: string
 *                     url:
-*                       description: Request url
+*                       description: Request URL
 *                       type: string
 *                 apiVersion:
 *                   type: string

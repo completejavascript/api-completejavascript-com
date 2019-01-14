@@ -1,4 +1,5 @@
 {
   "alias": "completejavascript",
+  "alias-staging": "test-api-completejavascript",
   "version": 1
 }
