@@ -1,6 +1,6 @@
 {
   "name": "api-completejavascript-com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of some public RESTful APIs from Complete Javascript",
   "main": "server.js",
   "scripts": {
