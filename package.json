@@ -15,7 +15,7 @@
     "config": "^3.0.1",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "rss-parser": "^3.6.2",
     "serve-favicon": "^2.5.0",
     "swagger-jsdoc": "^3.2.6",
