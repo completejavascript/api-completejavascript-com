@@ -11,24 +11,24 @@
     "test-v1": "mocha ./test/v1/*.js"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "config": "^3.0.1",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "pug": "^2.0.3",
-    "rss-parser": "^3.6.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "rss-parser": "^3.12.0",
     "serve-favicon": "^2.5.0",
-    "swagger-jsdoc": "^3.2.6",
+    "swagger-jsdoc": "^6.1.0",
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.2.1",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.9"
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7"
   },
   "engines": {
-    "node": "8.x"
+    "node": "14.x"
   },
   "repository": {
     "url": "https://github.com/completejavascript/api-completejavascript-com"
