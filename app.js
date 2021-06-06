@@ -8,6 +8,7 @@ const path = require("path");
 const jsonFeedRoutesV1 = require("./api/v1/routes/json-feed.js");
 const swaggerDocRoutesV1 = require("./api/v1/routes/swagger-jsdoc.js");
 const weatherRoutesV1 = require("./api/v1/routes/weather.js");
+const wikipediaRoutesV1 = require("./api/v1/routes/wikipedia.js");
 
 const HOST = process.env.HOST;
 console.log(process.env.HOST, process.env.API_VERSION);
@@ -58,11 +59,15 @@ app.get("/demo/v1/json-feed", (req, res) => {
 app.get("/demo/v1/weather", (req, res) => {
   res.render("v1/demo/weather", { HOST });
 });
+app.get("/demo/v1/wikipedia", (req, res) => {
+  res.render("v1/demo/wikipedia", { HOST });
+});
 
 // Handle valid requests
 app.use("/api/v1/jsonfeed", jsonFeedRoutesV1);
 app.use("/api/v1/docs", swaggerDocRoutesV1);
 app.use("/api/v1/weather", weatherRoutesV1);
+app.use("/api/v1/wikipedia", wikipediaRoutesV1);
 
 // Handle 404 requests
 app.use((req, res, next) => {
