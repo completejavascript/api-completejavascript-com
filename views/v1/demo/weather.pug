@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="description" content="Getting the weather data from a location by latitude and longitude from Complete Javascript's Public APIs")
+    meta(name="keywords" content="public api, json feed, rss feed to json, rss feed")
+    title Getting Weather Demo - Complete JavaScript
+    link(rel="stylesheet" href="/styles/primitive.css")
+  body  
+    div(id="root" class="container medium-container" host=`${HOST}`)
+      header
+        h1 Getting Weather Demo
+        p.
+          This demo gets the weather data using #[a(href=`${HOST}/#tag/Weather`) Weather API] from  #[a(href="https://completejavascript.com/") Complete Javascript]. 
+          Then it renders the JSON into collapsible HTML using #[a(href="https://caldwell.github.io/renderjson/") Renderjson].
+      main
+        section
+          hr
+          form
+            label(for="inp-lat") Latitude
+            input(id="inp-lat" type="text" placeholder="Enter latitude..." required)
+            label(for="inp-lng") Latitude
+            input(id="inp-lng" type="text" placeholder="Enter longitude..." required)
+            label(for="full-req") Full Request URL
+            p(id="full-req")
+            button(id="btn-fetch" class="muted-button") Fetch
+        
+        section
+          hr
+          label View raw JSON as text
+          textarea(name="" id="txt-area" cols="30" rows="20" class="margin-bottom")
+        
+        section
+          hr
+          label View pretty JSON as HTML
+          div(id="json-html")
+      
+      footer
+        hr
+        p.
+          Made with ❤️ by: #[a(href="https://completejavascript.com") Complete Javascript].
+          Unless otherwise noted, all code is free to use under the MIT License.
+
+  script(src="https://cdn.jsdelivr.net/npm/renderjson@1.4.0/renderjson.min.js")
+  script(src="/scripts/weather.js")

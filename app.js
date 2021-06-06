@@ -7,6 +7,7 @@ const path = require("path");
 
 const jsonFeedRoutesV1 = require("./api/v1/routes/json-feed.js");
 const swaggerDocRoutesV1 = require("./api/v1/routes/swagger-jsdoc.js");
+const weatherRoutesV1 = require("./api/v1/routes/weather.js");
 
 const HOST = process.env.HOST;
 console.log(process.env.HOST, process.env.API_VERSION);
@@ -40,26 +41,30 @@ app.use((req, res, next) => {
   next();
 });
 
-//Configure for server's frontend
+// Handle doc requests
 if (process.env.API_VERSION === "1") {
   app.get("/", (req, res) => {
     res.render("v1/docs/redoc", { HOST });
   });
 }
-
 app.get("/docs/v1/", (req, res) => {
   res.render("v1/docs/redoc", { HOST });
 });
 
+// Handle demo requests
 app.get("/demo/v1/json-feed", (req, res) => {
   res.render("v1/demo/json-feed", { HOST });
 });
+app.get("/demo/v1/weather", (req, res) => {
+  res.render("v1/demo/weather", { HOST });
+});
 
-// Handling valid requests
+// Handle valid requests
 app.use("/api/v1/jsonfeed", jsonFeedRoutesV1);
 app.use("/api/v1/docs", swaggerDocRoutesV1);
+app.use("/api/v1/weather", weatherRoutesV1);
 
-// Hanling 404 requests
+// Handle 404 requests
 app.use((req, res, next) => {
   const error = new Error("Request not found");
   error.status = 404;

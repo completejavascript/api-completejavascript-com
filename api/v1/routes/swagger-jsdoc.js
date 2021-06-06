@@ -16,7 +16,7 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ["./api/v1/routes/json-feed.js"],
+  apis: ["./api/v1/routes/json-feed.js", "./api/v1/routes/weather.js"],
   basePath: "./api/v1",
 };
 

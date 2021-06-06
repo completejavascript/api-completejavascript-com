@@ -1,6 +1,0 @@
-{
-  "HOST": "http://localhost:3000",
-  "SWAGGER_HOST": "localhost:3000",
-  "PORT": "3000",
-  "API_VERSION": "1"
-}
