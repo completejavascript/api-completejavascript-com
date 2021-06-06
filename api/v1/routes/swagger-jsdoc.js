@@ -5,7 +5,7 @@ const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerDefinition = {
   info: {
     title: "Complete JavaScript's Public APIs Documentation",
-    version: "1.0.0",
+    version: "1.0.1",
     description:
       "<p>This is an API documentation of public RESTful APIs for developers.</p>" +
       '<p>Fork me on Github: <a href="https://github.com/completejavascript/api-completejavascript-com">api-completejavascript-com</a> | ' +
