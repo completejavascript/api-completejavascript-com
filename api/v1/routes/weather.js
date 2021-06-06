@@ -121,6 +121,20 @@ router.get("/", async (req, res, next) => {
     return next(error);
   }
 
+  if (isNaN(lat)) {
+    const error = new Error("Latitude value is not a number");
+    error.status = 400;
+    error.apiVersion = "1";
+    return next(error);
+  }
+
+  if (isNaN(lng)) {
+    const error = new Error("Longitude value is not a number");
+    error.status = 400;
+    error.apiVersion = "1";
+    return next(error);
+  }
+
   if (lat < -90 || lat > 90) {
     const error = new Error("Latitude must be a number between -90 and 90");
     error.status = 400;
