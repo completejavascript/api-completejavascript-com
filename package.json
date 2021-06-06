@@ -2,15 +2,18 @@
   "name": "api-completejavascript-com",
   "version": "0.0.3",
   "description": "A collection of some public RESTful APIs from Complete Javascript",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start-dev": "nodemon server.js",
-    "test-v1": "mocha ./test/v1/*.js"
+    "vercel:prod": "vercel -e NODE_ENV=production --prod",
+    "vercel:stg": "vercel -e NODE_ENV=preview",
+    "start": "cross-env NODE_ENV=development node index.js",
+    "start-dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test-v1": "cross-env NODE_ENV=development mocha ./test/v1/*.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "config": "^3.3.6",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "pug": "^3.0.2",

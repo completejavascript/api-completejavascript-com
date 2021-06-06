@@ -1,23 +1,23 @@
-const router = require('express').Router();
-const swaggerJSDoc = require('swagger-jsdoc');
-const config = require('config');
+const router = require("express").Router();
+const swaggerJSDoc = require("swagger-jsdoc");
 
 // Setup up swagger-jsdoc
 const swaggerDefinition = {
   info: {
     title: "Complete JavaScript's Public APIs Documentation",
     version: "1.0.0",
-    description: "<p>This is an API documentation of public RESTful APIs for developers.</p>" + 
-                 "<p>Fork me on Github: <a href=\"https://github.com/completejavascript/api-completejavascript-com\">api-completejavascript-com</a> | " +
-                 "Made with ❤️ by: <a href=\"https://completejavascript.com\">Complete Javascript</a></p>",
+    description:
+      "<p>This is an API documentation of public RESTful APIs for developers.</p>" +
+      '<p>Fork me on Github: <a href="https://github.com/completejavascript/api-completejavascript-com">api-completejavascript-com</a> | ' +
+      'Made with ❤️ by: <a href="https://completejavascript.com">Complete Javascript</a></p>',
   },
-  host: config.get('SWAGGER_HOST'),
+  host: process.env.SWAGGER_HOST,
 };
 
 const options = {
   swaggerDefinition,
   apis: ["./api/v1/routes/json-feed.js"],
-  basePath: './api/v1'
+  basePath: "./api/v1",
 };
 
 const swaggerSpec = swaggerJSDoc(options);

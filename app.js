@@ -2,19 +2,19 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const config = require("config");
 const favicon = require("serve-favicon");
 const path = require("path");
 
 const jsonFeedRoutesV1 = require("./api/v1/routes/json-feed.js");
 const swaggerDocRoutesV1 = require("./api/v1/routes/swagger-jsdoc.js");
 
-const HOST = config.get("HOST");
+const HOST = process.env.HOST;
+console.log(process.env.HOST, process.env.API_VERSION);
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // Config views
@@ -40,8 +40,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// Configure for server's frontend
-if (config.get("API_VERSION") === "1") {
+//Configure for server's frontend
+if (process.env.API_VERSION === "1") {
   app.get("/", (req, res) => {
     res.render("v1/docs/redoc", { HOST });
   });
@@ -75,7 +75,7 @@ app.use((error, req, res, next) => {
     },
     request: {
       method: req.method,
-      url: `${config.get("HOST")}${req.originalUrl}`,
+      url: `${process.env.HOST}${req.originalUrl}`,
     },
     apiVersion: error.apiVersion,
   });
