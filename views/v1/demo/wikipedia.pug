@@ -8,6 +8,12 @@ html(lang="en")
     meta(name="keywords" content="public api, json feed, rss feed to json, rss feed")
     title Search Wikipedia Demo - Complete JavaScript
     link(rel="stylesheet" href="/styles/primitive.css")
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-96543695-12")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-96543695-12');
   body  
     div(id="root" class="container medium-container" host=`${HOST}`)
       header

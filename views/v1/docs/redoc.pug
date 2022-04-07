@@ -8,7 +8,12 @@ html(lang="en")
     meta(name="keywords" content="public api, json feed, rss feed to json, rss feed")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel="stylesheet" href="/styles/redoc.css")
-      
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-96543695-12")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-96543695-12');
   body
     redoc(spec-url=`${HOST}/api/v1/docs/swagger.json`, expand-responses="all")
     script(src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js")
